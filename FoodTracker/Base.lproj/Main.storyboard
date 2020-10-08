@@ -45,6 +45,7 @@
                                     <outlet property="nameLabel" destination="Xp0-fi-3Yr" id="gfe-pL-p4i"/>
                                     <outlet property="photoImageView" destination="KFa-Aq-s8U" id="mEr-uS-6a8"/>
                                     <outlet property="ratingControl" destination="q6h-zQ-L2z" id="AZH-Xk-NJT"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="hhi-yg-uR3"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -54,6 +55,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Nom Nom Food" id="hW3-Ca-WkE">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="vz6-bG-o7D"/>
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="plQ-Gv-9et">
                             <connections>
                                 <segue destination="x7p-OK-imz" kind="presentation" identifier="AddItem" id="LyV-tp-pR3"/>
@@ -70,43 +72,39 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MealViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="mmq-FY-i8g">
-                                <rect key="frame" x="40" y="116" width="320" height="400"/>
+                                <rect key="frame" x="40" y="128" width="320" height="474"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="136" placeholderIntrinsicHeight="50" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uMG-5h-bYq">
-                                        <rect key="frame" x="92" y="0.0" width="136" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="14d-yI-4kX"/>
-                                        </constraints>
+                                        <rect key="frame" x="92" y="0.0" width="136" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="DefaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="67C-Fz-VxF">
-                                        <rect key="frame" x="0.0" y="67" width="320" height="262"/>
+                                        <rect key="frame" x="0.0" y="77" width="320" height="320"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="n6T-dE-beV" appends="YES" id="c0l-KP-HLZ"/>
                                         </connections>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="nda-cR-vme" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="32" y="356" width="256" height="44"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="256" placeholderIntrinsicHeight="50" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="nda-cR-vme" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                        <rect key="frame" x="32" y="424" width="256" height="50"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="mmq-FY-i8g" secondAttribute="height" multiplier="64:97" id="XQ7-EC-JtK"/>
-                                    <constraint firstAttribute="height" constant="400" id="iQX-JV-ffd"/>
+                                    <constraint firstAttribute="width" secondItem="mmq-FY-i8g" secondAttribute="height" multiplier="160:237" id="YLr-eJ-JO2"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mmq-FY-i8g" secondAttribute="trailing" constant="20" id="QmQ-gb-RwA"/>
-                            <constraint firstItem="mmq-FY-i8g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="V72-LT-7ZN"/>
-                            <constraint firstItem="mmq-FY-i8g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="khl-tt-8QG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mmq-FY-i8g" secondAttribute="trailing" constant="54" id="84L-0Y-AOZ"/>
+                            <constraint firstItem="mmq-FY-i8g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="m3K-W0-NR9"/>
+                            <constraint firstItem="mmq-FY-i8g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="oCD-Hq-zkb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="More FOOD!" id="hWX-rg-MVB">
@@ -122,8 +120,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="cancel" destination="20C-yG-XMU" id="Jl9-Lo-U02"/>
-                        <outlet property="cancelButton" destination="20C-yG-XMU" id="zkN-4U-UFX"/>
                         <outlet property="nameTextField" destination="uMG-5h-bYq" id="ZNu-5s-egb"/>
                         <outlet property="photoImageView" destination="67C-Fz-VxF" id="ZbI-Bf-Axf"/>
                         <outlet property="ratingControl" destination="nda-cR-vme" id="zai-NV-BSS"/>
@@ -174,9 +170,17 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Blq-Rf-d76" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="71.651785714285708"/>
+            <point key="canvasLocation" x="1052" y="-305"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="nda-cR-vme">
+            <size key="intrinsicContentSize" width="256" height="50"/>
+        </designable>
+    </designables>
+    <inferredMetricsTieBreakers>
+        <segue reference="hhi-yg-uR3"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="DefaultPhoto" width="600" height="314"/>
         <image name="plus" catalog="system" width="128" height="113"/>
